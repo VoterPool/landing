@@ -1,0 +1,447 @@
+import React from 'react';
+
+type Feature = {
+  title: string;
+  description: string;
+  icon: React.ReactNode;
+};
+
+const features: Feature[] = [
+  {
+    title: 'Изолированные организации',
+    description:
+      'Создавайте отдельные пространства для организаций — каждая организация имеет свои настройки, участников и историю предложений.',
+    icon: (
+      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" aria-hidden>
+        <path
+          d="M3 12h7"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M14 6h7"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M14 18h7"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <circle
+          cx="9.5"
+          cy="12"
+          r="3.5"
+          stroke="currentColor"
+          strokeWidth="1.5"
+        />
+      </svg>
+    ),
+  },
+  {
+    title: 'Конфиденциальность и шифрование',
+    description:
+      'Все данные зашифрованы и недоступны для хостинг-компаний — только участники организации видят результаты и предложения.',
+    icon: (
+      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" aria-hidden>
+        <path
+          d="M12 15v2"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <rect
+          x="5"
+          y="8"
+          width="14"
+          height="10"
+          rx="2"
+          stroke="currentColor"
+          strokeWidth="1.5"
+        />
+        <path
+          d="M8 8V6a4 4 0 0 1 8 0v2"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    ),
+  },
+  {
+    title: 'Гибкие параметры консенсуса',
+    description:
+      'Настраивайте кворум, веса голосов и применяйте изменения консенсуса через голосования — они влияют на будущие предложения.',
+    icon: (
+      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" aria-hidden>
+        <path
+          d="M3 12h18"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M8 6v12"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M16 6v12"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    ),
+  },
+];
+
+export default function Home(): JSX.Element {
+  return (
+    <div className="min-h-screen bg-white text-slate-900 antialiased">
+      {/* Header */}
+      <header className="max-w-7xl mx-auto px-6 py-8 flex items-center justify-between">
+        <div className="flex items-center gap-4">
+          <a
+            href="/"
+            aria-label="Voterpool Home"
+            className="flex items-center gap-3"
+          >
+            {/* Logo: put /logo.png into public folder */}
+            <img
+              src="/logo.png"
+              alt="Voterpool"
+              className="w-45 h-14 object-contain"
+            />
+
+            <div className="hidden md:block">
+              <span className="sr-only">Voterpool</span>
+              {/* <p className="text-xs text-slate-500">
+                Collective governance, private by design
+              </p> */}
+            </div>
+          </a>
+        </div>
+
+        <div className="flex items-center gap-4">
+          <nav className="hidden md:flex items-center gap-6 text-sm text-slate-600">
+            <a href="#features" className="hover:text-slate-900">
+              Возможности
+            </a>
+            <a href="#how" className="hover:text-slate-900">
+              Как это работает
+            </a>
+            <a href="#security" className="hover:text-slate-900">
+              Безопасность
+            </a>
+          </nav>
+
+          <a
+            href="/app"
+            className="inline-flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-300"
+          >
+            Перейти в приложение
+          </a>
+        </div>
+      </header>
+
+      {/* Hero */}
+      <main className="max-w-7xl mx-auto px-6">
+        <section className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center py-16">
+          <div>
+            <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight leading-tight text-slate-900">
+              <span className="text-5xl font-semibold tracking-tight text-blue-600">
+                Voterpool
+              </span>{' '}
+              — приватная инфраструктура для коллективных решений
+            </h2>
+            <p className="mt-6 text-lg text-slate-600 max-w-2xl">
+              Создавайте изолированные организации, подключайте AI-агентов,
+              управляйте силой голоса, настраивайте параметры консенсуса и
+              принимайте решения с высокой степенью конфиденциальности.
+            </p>
+
+            <div className="mt-8 flex gap-4">
+              <a
+                href="/app"
+                className="inline-flex items-center gap-2 bg-blue-600 text-white px-5 py-3 rounded-md font-medium shadow hover:bg-blue-700"
+              >
+                Открыть приложение
+              </a>
+              <a
+                href="#how"
+                className="inline-flex items-center gap-2 border border-slate-200 px-5 py-3 rounded-md text-slate-700 hover:bg-slate-50"
+              >
+                Как это работает
+              </a>
+            </div>
+
+            <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div className="p-4 rounded-lg bg-slate-50">
+                <div className="text-xs text-slate-500">EVM</div>
+                <div className="text-lg font-semibold">Приватный блокчейн</div>
+              </div>
+              <div className="p-4 rounded-lg bg-slate-50">
+                <div className="text-xs text-slate-500">Governance</div>
+                <div className="text-lg font-semibold">
+                  Стандарты OpenZeppelin
+                </div>
+              </div>
+              <div className="p-4 rounded-lg bg-slate-50">
+                <div className="text-xs text-slate-500">Транзакции</div>
+                <div className="text-lg font-semibold">Без газа</div>
+              </div>
+            </div>
+          </div>
+
+          <div className="relative">
+            <div className="rounded-2xl p-6 bg-gradient-to-tr from-blue-50 to-white shadow-lg border border-slate-100">
+              <div className="flex items-center justify-between">
+                <div>
+                  <div className="text-sm text-slate-500">
+                    Группа управления
+                  </div>
+                  <h3 className="text-xl font-semibold">Текущие предложения</h3>
+                </div>
+                <div className="text-sm text-slate-500">Кворум: 35%</div>
+              </div>
+
+              <ul className="mt-6 space-y-4">
+                <li className="bg-white p-4 rounded-lg border border-slate-100">
+                  <div className="flex justify-between items-start gap-4">
+                    <div>
+                      <div className="text-sm font-medium">
+                        Изменить кворум голосования
+                      </div>
+                      <div className="text-xs text-slate-500 mt-1">
+                        Предложение #34 — 3 дня до окончания
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <div className="text-xs text-slate-500">За: 42%</div>
+                      <div className="text-xs text-slate-500">Против: 33%</div>
+                    </div>
+                  </div>
+                </li>
+
+                <li className="bg-white p-4 rounded-lg border border-slate-100">
+                  <div className="flex justify-between items-start gap-4">
+                    <div>
+                      <div className="text-sm font-medium">
+                        Предоставить 3% силы голоса для участника
+                      </div>
+                      <div className="text-xs text-slate-500 mt-1">
+                        Предложение #35 — 5 дней до окончания
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <div className="text-xs text-slate-500">За: 61%</div>
+                      <div className="text-xs text-slate-500">Против: 12%</div>
+                    </div>
+                  </div>
+                </li>
+
+                <li className="bg-white p-4 rounded-lg border border-slate-100">
+                  <div className="flex justify-between items-start gap-4">
+                    <div>
+                      <div className="text-sm font-medium">
+                        Добавить AI-агента в организацию
+                      </div>
+                      <div className="text-xs text-slate-500 mt-1">
+                        Предложение #36 — 12 дней до окончания
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <div className="text-xs text-slate-500">За: 78%</div>
+                      <div className="text-xs text-slate-500">Против: 7%</div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            {/* <div className="mt-4 text-xs text-slate-400">
+              Пример интерфейса Feed внутри организации — все данные приватны
+            </div> */}
+          </div>
+        </section>
+
+        {/* Features */}
+        <section id="features" className="py-16">
+          <div className="max-w-4xl mx-auto text-center">
+            <h3 className="text-2xl font-semibold">Возможности Voterpool</h3>
+            <p className="mt-3 text-slate-600">
+              Инструменты для гибкой и приватной коллективной работы:
+            </p>
+          </div>
+
+          <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-6">
+            {features.map((f) => (
+              <article
+                key={f.title}
+                className="p-6 bg-white rounded-2xl shadow-sm border border-slate-100"
+              >
+                <div className="flex items-center gap-4">
+                  <div className="text-blue-600">{f.icon}</div>
+                  <div>
+                    <h4 className="font-semibold">{f.title}</h4>
+                    <p className="mt-2 text-sm text-slate-500">
+                      {f.description}
+                    </p>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        {/* How it works */}
+        <section id="how" className="py-16">
+          <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="md:col-span-1">
+              <h4 className="text-xl font-semibold">Как это работает</h4>
+              <p className="mt-3 text-slate-600">
+                Voterpool предоставляет инфраструктуру: создайте организацию,
+                пригласите участников, настройте параметры, голосуйте и
+                применяйте результаты. Интегрируйте в консенсус через API
+                AI-агентов, приложения и IoT устройства.
+              </p>
+            </div>
+
+            <div className="md:col-span-2 space-y-6">
+              <div className="p-6 bg-slate-50 rounded-xl border border-slate-100">
+                <div className="text-sm font-medium text-slate-700">
+                  1. Создание организации
+                </div>
+                <div className="text-sm text-slate-500 mt-2">
+                  Конфигурируйте базовые параметры. Система создаёт
+                  изолированную область с шифрованием данных.
+                </div>
+              </div>
+
+              <div className="p-6 bg-slate-50 rounded-xl border border-slate-100">
+                <div className="text-sm font-medium text-slate-700">
+                  2. Предложения и голосования
+                </div>
+                <div className="text-sm text-slate-500 mt-2">
+                  Участники создают предложения; голосование может изменить
+                  параметры консенсуса или распределение токенов управления.
+                </div>
+              </div>
+
+              <div className="p-6 bg-slate-50 rounded-xl border border-slate-100">
+                <div className="text-sm font-medium text-slate-700">
+                  3. Исполнение и история
+                </div>
+                <div className="text-sm text-slate-500 mt-2">
+                  Результаты применяются автоматически к следующим предложениям;
+                  весь журнал доступен только участникам организации.
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Security */}
+        <section id="security" className="py-16">
+          <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div>
+              <h4 className="text-2xl font-semibold">
+                Безопасность и приватность
+              </h4>
+              <p className="mt-4 text-slate-600">
+                Вся логика governance реализована в смарт-контрактах стандарта
+                OpenZeppelin на приватном EVM. Транзакции без газа упрощают UX —
+                при этом данные шифруются для провайдера инфраструктуры и
+                головной компании.
+              </p>
+
+              <ul className="mt-6 space-y-3 text-sm text-slate-600">
+                <li>🔐 End-to-end шифрование предложений и голосов;</li>
+                <li>🧾 Смарт-контракты на базе стандартов OpenZeppelin;</li>
+                <li>
+                  ⚡ Безгазовые транзакции на приватном EVM для лучшего UX;
+                </li>
+                <li>🤖 Поддержка ИИ, приложений и IoT как участников.</li>
+              </ul>
+            </div>
+
+            <div>
+              <div className="rounded-xl p-6 bg-white border border-slate-100 shadow-sm">
+                <div className="text-sm text-slate-500">Архитектура</div>
+                <div className="mt-4 grid grid-cols-1 gap-4">
+                  <div className="p-4 rounded-md bg-slate-50">
+                    <div className="text-xs text-slate-500">Head Company</div>
+                    <div className="text-sm font-medium">
+                      Менеджмент организации и ключей шифрования
+                    </div>
+                  </div>
+                  <div className="p-4 rounded-md bg-slate-50">
+                    <div className="text-xs text-slate-500">
+                      Инфраструктурный провайдер
+                    </div>
+                    <div className="text-sm font-medium">
+                      Хранит зашифрованные данные, обеспечивает RPC
+                    </div>
+                  </div>
+                  <div className="p-4 rounded-md bg-slate-50">
+                    <div className="text-xs text-slate-500">Участники</div>
+                    <div className="text-sm font-medium">
+                      Люди, приложения, LLM и IoT; видят только свою организацию
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA */}
+        <section className="py-16">
+          <div className="max-w-3xl mx-auto text-center bg-gradient-to-r from-blue-50 to-white rounded-2xl p-10 border border-slate-100">
+            <h4 className="text-2xl font-semibold">
+              Готовы попробовать Voterpool?
+            </h4>
+            <p className="mt-3 text-slate-600">
+              Создайте организацию, пригласите участников и начните голосовать —
+              просто и безопасно.
+            </p>
+            <div className="mt-6 flex justify-center gap-4">
+              <a
+                href="/app"
+                className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-md font-medium shadow hover:bg-blue-700"
+              >
+                Перейти в приложение
+              </a>
+              {/* <a
+                href="/docs"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-md border border-slate-200 text-slate-700"
+              >
+                Документация
+              </a> */}
+            </div>
+          </div>
+        </section>
+
+        <footer className="py-12 text-center text-sm text-slate-500">
+          <div className="max-w-4xl mx-auto">
+            © {new Date().getFullYear()} Voterpool — Приватная инфраструктура
+            для коллективных решений. Все права защищены.
+          </div>
+        </footer>
+      </main>
+    </div>
+  );
+}
