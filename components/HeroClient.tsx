@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useEffect, useRef } from 'react';
+import WordCycler from './WordCycler';
 
 export default function HeroClient() {
   const bgRef = useRef<HTMLDivElement | null>(null);
@@ -66,7 +67,7 @@ export default function HeroClient() {
           <span className="text-5xl font-semibold tracking-tight text-blue-600">
             Voterpool
           </span>{' '}
-          — приватная инфраструктура для коллективных решений
+          — <WordCycler /> инфраструктура для коллективных решений
         </h2>
         <p className="mt-6 text-lg text-slate-600 max-w-2xl">
           Создавайте изолированные организации, подключайте AI-агентов,
