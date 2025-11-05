@@ -123,7 +123,9 @@ export default function Home(): JSX.Element {
             className="flex items-center gap-3"
           >
             <Image
-              src="/logo.png"
+              src="./logo.png"
+              width="180"
+              height="56"
               alt="Voterpool"
               className="w-45 h-14 object-contain"
             />
