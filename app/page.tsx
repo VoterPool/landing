@@ -1,3 +1,4 @@
+import ContactForm from '@/components/ContactForm';
 import HeroClient from '@/components/HeroClient';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -154,7 +155,7 @@ export default function Home(): JSX.Element {
 
           <a
             href="/app"
-            className="inline-flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-300"
+            className="inline-flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-300 pointer-events-none"
           >
             Перейти в приложение
           </a>
@@ -346,8 +347,10 @@ export default function Home(): JSX.Element {
           </div>
         </section>
 
+        <ContactForm />
+
         {/* CTA */}
-        <section className="py-16">
+        {/* <section className="py-16">
           <div className="max-w-3xl mx-auto text-center bg-gradient-to-r from-blue-50 to-white rounded-2xl p-10 border border-slate-100">
             <h4 className="text-2xl font-semibold">
               Готовы попробовать{' '}
@@ -366,15 +369,15 @@ export default function Home(): JSX.Element {
               >
                 Перейти в приложение
               </a>
-              {/* <a
+              <a
                 href="/docs"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-md border border-slate-200 text-slate-700"
               >
                 Документация
-              </a> */}
+              </a>
             </div>
           </div>
-        </section>
+        </section> */}
 
         <footer className="py-12 text-center text-sm text-slate-500">
           <div className="max-w-4xl mx-auto">

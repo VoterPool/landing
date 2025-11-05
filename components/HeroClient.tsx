@@ -82,7 +82,7 @@ export default function HeroClient() {
         >
           <a
             href="/app"
-            className="inline-flex items-center gap-2 bg-blue-600 text-white px-5 py-3 rounded-md font-medium shadow hover:bg-blue-700 transition"
+            className="inline-flex items-center gap-2 bg-blue-600 text-white px-5 py-3 rounded-md font-medium shadow hover:bg-blue-700 transition pointer-events-none"
           >
             Открыть приложение
           </a>
