@@ -236,8 +236,11 @@ export default function Home(): JSX.Element {
             <div className="md:col-span-1">
               <h4 className="text-xl font-semibold">Как это работает</h4>
               <p className="mt-3 text-slate-600">
-                Voterpool предоставляет инфраструктуру: создайте организацию,
-                пригласите участников, настройте параметры.
+                <span className="font-semibold tracking-tight text-blue-600">
+                  Voterpool
+                </span>{' '}
+                предоставляет инфраструктуру: создайте организацию, пригласите
+                участников, настройте параметры.
               </p>
               <p className="mt-3 text-slate-600">
                 Получите API key и с легкостью интегрируйте в консенсус:
@@ -349,9 +352,8 @@ export default function Home(): JSX.Element {
             <h4 className="text-2xl font-semibold">
               Готовы попробовать{' '}
               <span className="font-semibold tracking-tight text-blue-600">
-                Voterpool
+                Voterpool?
               </span>
-              ?
             </h4>
             <p className="mt-3 text-slate-600">
               Создайте организацию, пригласите участников и начните голосовать —
