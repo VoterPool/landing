@@ -167,7 +167,7 @@ export default function Home(): JSX.Element {
           <div className="max-w-4xl mx-auto text-center">
             <h3 className="text-2xl font-semibold">Преимущества</h3>
             <p className="mt-3 text-slate-600">
-              Современный автономный сервис:
+              Решение для безопасного и масштабируемого голосования:
             </p>
           </div>
           <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">

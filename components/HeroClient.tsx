@@ -179,10 +179,6 @@ export default function HeroClient() {
             </motion.li>
           </ul>
         </div>
-
-        <div className="mt-4 text-xs text-slate-400">
-          Пример интерфейса Feed внутри организации — все данные приватны
-        </div>
       </motion.div>
     </section>
   );
