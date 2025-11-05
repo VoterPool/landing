@@ -44,7 +44,7 @@ export default function ContactForm(): JSX.Element {
             </h4>
             <p className="mt-4 text-slate-600">
               Создайте организацию, пригласите участников и начните голосовать —
-              быстро, безопасно и без лишних усилий.
+              просто и безопасно.
             </p>
             <div className="mt-6 flex flex-wrap gap-4">
               <a
