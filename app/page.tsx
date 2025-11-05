@@ -1,3 +1,4 @@
+import HeroClient from '@/components/HeroClient';
 import Link from 'next/link';
 import React, { JSX } from 'react';
 
@@ -113,7 +114,7 @@ export default function Home(): JSX.Element {
   return (
     <div className="min-h-screen bg-white text-slate-900 antialiased">
       {/* Header */}
-      <header className="max-w-7xl mx-auto px-6 py-8 flex items-center justify-between">
+      <header className="max-w-7xl mx-auto px-6 py-8 flex gap-4 items-center justify-between">
         <div className="flex items-center gap-4">
           <Link
             href="/"
@@ -138,7 +139,7 @@ export default function Home(): JSX.Element {
         <div className="flex items-center gap-4">
           <nav className="hidden md:flex items-center gap-6 text-sm text-slate-600">
             <a href="#features" className="hover:text-slate-900">
-              Возможности
+              Преимущества
             </a>
             <a href="#how" className="hover:text-slate-900">
               Как это работает
@@ -159,106 +160,16 @@ export default function Home(): JSX.Element {
 
       {/* Hero */}
       <main className="max-w-7xl mx-auto px-6">
-        <section className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center py-16">
-          <div>
-            <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight leading-tight text-slate-900">
-              <span className="text-5xl font-semibold tracking-tight text-blue-600">
-                Voterpool
-              </span>{' '}
-              — приватная инфраструктура для коллективных решений
-            </h2>
-            <p className="mt-6 text-lg text-slate-600 max-w-2xl">
-              Создавайте изолированные организации, подключайте AI-агентов,
-              настраивайте параметры консенсуса, управляйте силой голоса и
-              принимайте решения с высокой степенью конфиденциальности.
-            </p>
-
-            <div className="mt-8 flex gap-4">
-              <a
-                href="/app"
-                className="inline-flex items-center gap-2 bg-blue-600 text-white px-5 py-3 rounded-md font-medium shadow hover:bg-blue-700"
-              >
-                Открыть приложение
-              </a>
-              <a
-                href="#how"
-                className="inline-flex items-center gap-2 border border-slate-200 px-5 py-3 rounded-md text-slate-700 hover:bg-slate-50"
-              >
-                Как это работает
-              </a>
-            </div>
-          </div>
-
-          <div className="relative">
-            <div className="rounded-2xl p-6 bg-gradient-to-tr from-blue-50 to-white shadow-lg border border-slate-100">
-              <div className="flex items-center justify-between">
-                <div>
-                  <div className="text-sm text-slate-500">
-                    Группа управления
-                  </div>
-                  <h3 className="text-xl font-semibold">Текущие предложения</h3>
-                </div>
-                <div className="text-sm text-slate-500">Кворум: 35%</div>
-              </div>
-
-              <ul className="mt-6 space-y-4">
-                <li className="bg-white p-4 rounded-lg border border-slate-100">
-                  <div className="flex justify-between items-start gap-4">
-                    <div>
-                      <div className="text-sm font-medium">
-                        Изменить кворум голосования
-                      </div>
-                      <div className="text-xs text-slate-500 mt-1">
-                        Предложение #34 — 3 дня до окончания
-                      </div>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <div className="text-xs text-slate-500">За: 42%</div>
-                      <div className="text-xs text-slate-500">Против: 33%</div>
-                    </div>
-                  </div>
-                </li>
-
-                <li className="bg-white p-4 rounded-lg border border-slate-100">
-                  <div className="flex justify-between items-start gap-4">
-                    <div>
-                      <div className="text-sm font-medium">
-                        Предоставить 3% силы голоса для участника
-                      </div>
-                      <div className="text-xs text-slate-500 mt-1">
-                        Предложение #35 — 5 дней до окончания
-                      </div>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <div className="text-xs text-slate-500">За: 61%</div>
-                      <div className="text-xs text-slate-500">Против: 12%</div>
-                    </div>
-                  </div>
-                </li>
-
-                <li className="bg-white p-4 rounded-lg border border-slate-100">
-                  <div className="flex justify-between items-start gap-4">
-                    <div>
-                      <div className="text-sm font-medium">
-                        Добавить AI-агента в организацию
-                      </div>
-                      <div className="text-xs text-slate-500 mt-1">
-                        Предложение #36 — 12 дней до окончания
-                      </div>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <div className="text-xs text-slate-500">За: 78%</div>
-                      <div className="text-xs text-slate-500">Против: 7%</div>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </section>
+        <HeroClient />
 
         {/* Features */}
-        <section id="features" className="py-16">
+        <section id="features" className="pb-16 pt-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <h3 className="text-2xl font-semibold">Преимущества</h3>
+            <p className="mt-3 text-slate-600">
+              Современный автономный сервис:
+            </p>
+          </div>
           <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="p-4 rounded-lg bg-slate-50">
               <div className="text-xs text-slate-500">Безопасность</div>
@@ -280,10 +191,9 @@ export default function Home(): JSX.Element {
               </div>
             </div>
             <div className="p-4 rounded-lg bg-slate-50">
-              <div className="text-xs text-slate-500">Масштаб</div>
+              <div className="text-xs text-slate-500">Простота</div>
               <div className="text-lg font-semibold">
-                Проводите сложные голосования с тысячами участников быстро и без
-                бумаг
+                Быстрая и легкая интеграция с внешними сервисами
               </div>
             </div>
           </div>
@@ -291,7 +201,7 @@ export default function Home(): JSX.Element {
 
         <section className="py-16">
           <div className="max-w-4xl mx-auto text-center">
-            <h3 className="text-2xl font-semibold">Возможности Voterpool</h3>
+            <h3 className="text-2xl font-semibold">Возможности</h3>
             <p className="mt-3 text-slate-600">
               Инструменты для гибкой и приватной коллективной работы:
             </p>
@@ -424,7 +334,11 @@ export default function Home(): JSX.Element {
         <section className="py-16">
           <div className="max-w-3xl mx-auto text-center bg-gradient-to-r from-blue-50 to-white rounded-2xl p-10 border border-slate-100">
             <h4 className="text-2xl font-semibold">
-              Готовы попробовать Voterpool?
+              Готовы попробовать{' '}
+              <span className="font-semibold tracking-tight text-blue-600">
+                Voterpool
+              </span>
+              ?
             </h4>
             <p className="mt-3 text-slate-600">
               Создайте организацию, пригласите участников и начните голосовать —
