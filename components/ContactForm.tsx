@@ -34,8 +34,8 @@ export default function ContactForm(): JSX.Element {
 
   return (
     <section className="py-16">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           {/* Левый CTA-блок */}
           <div className="bg-gradient-to-r from-blue-50 to-white rounded-2xl p-10 border border-slate-100 shadow-lg">
             <h4 className="text-3xl font-semibold">
