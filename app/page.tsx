@@ -1,4 +1,5 @@
 import HeroClient from '@/components/HeroClient';
+import Image from 'next/image';
 import Link from 'next/link';
 import React, { JSX } from 'react';
 
@@ -121,7 +122,7 @@ export default function Home(): JSX.Element {
             aria-label="Voterpool Home"
             className="flex items-center gap-3"
           >
-            <img
+            <Image
               src="/logo.png"
               alt="Voterpool"
               className="w-45 h-14 object-contain"
