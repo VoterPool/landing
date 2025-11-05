@@ -1,4 +1,5 @@
-import React from 'react';
+import Link from 'next/link';
+import React, { JSX } from 'react';
 
 type Feature = {
   title: string;
@@ -114,12 +115,11 @@ export default function Home(): JSX.Element {
       {/* Header */}
       <header className="max-w-7xl mx-auto px-6 py-8 flex items-center justify-between">
         <div className="flex items-center gap-4">
-          <a
+          <Link
             href="/"
             aria-label="Voterpool Home"
             className="flex items-center gap-3"
           >
-            {/* Logo: put /logo.png into public folder */}
             <img
               src="/logo.png"
               alt="Voterpool"
@@ -132,7 +132,7 @@ export default function Home(): JSX.Element {
                 Collective governance, private by design
               </p> */}
             </div>
-          </a>
+          </Link>
         </div>
 
         <div className="flex items-center gap-4">
@@ -169,7 +169,7 @@ export default function Home(): JSX.Element {
             </h2>
             <p className="mt-6 text-lg text-slate-600 max-w-2xl">
               Создавайте изолированные организации, подключайте AI-агентов,
-              управляйте силой голоса, настраивайте параметры консенсуса и
+              настраивайте параметры консенсуса, управляйте силой голоса и
               принимайте решения с высокой степенью конфиденциальности.
             </p>
 
@@ -186,23 +186,6 @@ export default function Home(): JSX.Element {
               >
                 Как это работает
               </a>
-            </div>
-
-            <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
-              <div className="p-4 rounded-lg bg-slate-50">
-                <div className="text-xs text-slate-500">EVM</div>
-                <div className="text-lg font-semibold">Приватный блокчейн</div>
-              </div>
-              <div className="p-4 rounded-lg bg-slate-50">
-                <div className="text-xs text-slate-500">Governance</div>
-                <div className="text-lg font-semibold">
-                  Стандарты OpenZeppelin
-                </div>
-              </div>
-              <div className="p-4 rounded-lg bg-slate-50">
-                <div className="text-xs text-slate-500">Транзакции</div>
-                <div className="text-lg font-semibold">Без газа</div>
-              </div>
             </div>
           </div>
 
@@ -271,15 +254,42 @@ export default function Home(): JSX.Element {
                 </li>
               </ul>
             </div>
-
-            {/* <div className="mt-4 text-xs text-slate-400">
-              Пример интерфейса Feed внутри организации — все данные приватны
-            </div> */}
           </div>
         </section>
 
         {/* Features */}
         <section id="features" className="py-16">
+          <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="p-4 rounded-lg bg-slate-50">
+              <div className="text-xs text-slate-500">Безопасность</div>
+              <div className="text-lg font-semibold">
+                Блокчейн гарантирует защиту и неизменность данных голосования
+              </div>
+            </div>
+            <div className="p-4 rounded-lg bg-slate-50">
+              <div className="text-xs text-slate-500">Конфиденциальность</div>
+              <div className="text-lg font-semibold">
+                Данные надежно хранятся в зашифрованном виде
+              </div>
+            </div>
+            <div className="p-4 rounded-lg bg-slate-50">
+              <div className="text-xs text-slate-500">Масштаб</div>
+              <div className="text-lg font-semibold">
+                Проводите сложные голосования с тысячами участников быстро и без
+                бумаг
+              </div>
+            </div>
+            <div className="p-4 rounded-lg bg-slate-50">
+              <div className="text-xs text-slate-500">Масштаб</div>
+              <div className="text-lg font-semibold">
+                Проводите сложные голосования с тысячами участников быстро и без
+                бумаг
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-16">
           <div className="max-w-4xl mx-auto text-center">
             <h3 className="text-2xl font-semibold">Возможности Voterpool</h3>
             <p className="mt-3 text-slate-600">
@@ -315,8 +325,8 @@ export default function Home(): JSX.Element {
               <p className="mt-3 text-slate-600">
                 Voterpool предоставляет инфраструктуру: создайте организацию,
                 пригласите участников, настройте параметры, голосуйте и
-                применяйте результаты. Интегрируйте в консенсус через API
-                AI-агентов, приложения и IoT устройства.
+                применяйте результаты. Интегрируйте в консенсус через API IoT
+                устройства, приложения и AI-агентов.
               </p>
             </div>
 
@@ -374,7 +384,9 @@ export default function Home(): JSX.Element {
                 <li>
                   ⚡ Безгазовые транзакции на приватном EVM для лучшего UX;
                 </li>
-                <li>🤖 Поддержка ИИ, приложений и IoT как участников.</li>
+                <li>
+                  🤖 Поддержка AI-агентов, приложений и IoT как участников.
+                </li>
               </ul>
             </div>
 
@@ -399,7 +411,7 @@ export default function Home(): JSX.Element {
                   <div className="p-4 rounded-md bg-slate-50">
                     <div className="text-xs text-slate-500">Участники</div>
                     <div className="text-sm font-medium">
-                      Люди, приложения, LLM и IoT; видят только свою организацию
+                      Видят только свою организацию и голосования
                     </div>
                   </div>
                 </div>
