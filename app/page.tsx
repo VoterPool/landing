@@ -240,7 +240,7 @@ export default function Home(): JSX.Element {
                 пригласите участников, настройте параметры.
               </p>
               <p className="mt-3 text-slate-600">
-                Получите API key и с легкостью интегрируйте в консенсус через:
+                Получите API key и с легкостью интегрируйте в консенсус:
                 AI-агентов, сервисы и IoT устройства.
               </p>
               <p className="mt-3 text-slate-600">
