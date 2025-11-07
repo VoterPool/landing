@@ -217,9 +217,9 @@ export default function Home(): JSX.Element {
                 key={f.title}
                 className="p-6 bg-white rounded-2xl shadow-sm border border-slate-100"
               >
-                <div className="flex items-center gap-4">
+                <div className="flex flex-wrap items-center gap-4 md:flex-nowrap">
                   <div className="text-blue-600">{f.icon}</div>
-                  <div>
+                  <div className="sm:min-w-0">
                     <h4 className="font-semibold">{f.title}</h4>
                     <p className="mt-2 text-sm text-slate-500">
                       {f.description}
